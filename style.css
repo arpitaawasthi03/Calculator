@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+}
+:root {
+  /* --- Black theme --- */
+  /* --bg-color: linear-gradient(45deg, #0a0a0a, #3a4452);
+    --boxShadow-calculator:0px 3px 15px rgba(113, 115, 119, 0.5);
+    --boxShadow-input:0px 3px 15px rgba(84, 84, 84, 0.1);
+    --boxShadow-btn:-8px -8px 15px rgba(255, 255, 255, 0.1);
+    --bg-operators-color: #6dee0a;
+    --bg-equalBtn-color: #fb7c14;
+    --primary-text-color: #ffffff; */
+
+  /* --- Blue theme (Dark mode) --- */
+  /* --bg-color: linear-gradient(45deg, #0f172a, #1e293b);
+    --bg-operators-color: #38bdf8;
+    --bg-equalBtn-color: #869dc3;
+    --primary-text-color: #f8fafc;
+    --boxShadow-calculator: 
+    0px 25px 60px rgba(0, 0, 0, 0.6),
+    0px 5px 15px rgba(56, 189, 248, 0.08);
+    --boxShadow-input: 
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 6px rgba(56, 189, 248, 0.15); 
+    --boxShadow-btn: 
+    6px 6px 15px rgba(0, 0, 0, 0.5),
+    -3px -3px 10px rgba(255, 255, 255, 0.03),
+    0px 0px 8px rgba(56, 189, 248, 0.05);  */
+
+  /* --- Whitish mode (Light Mode) --- */
+  --bg-color: linear-gradient(135deg, #e6ecf5, #d6e0ef);
+  --bg-operators-color: #2563eb;
+  --bg-equalBtn-color: #4f6df5;
+  --primary-text-color: #0b1220;
+  --boxShadow-calculator:
+    0px 25px 50px rgba(0, 0, 0, 0.12), 0px 10px 20px rgba(37, 99, 235, 0.1);
+  --boxShadow-input:
+    inset 3px 3px 6px rgba(0, 0, 0, 0.12),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+  --boxShadow-btn:
+    6px 6px 14px rgba(0, 0, 0, 0.15), -4px -4px 12px rgba(255, 255, 255, 0.9),
+    0px 0px 8px rgba(37, 99, 235, 0.1);
+
+}
+
+.calculator {
+  padding: 20px;
+  border-radius: 16px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--boxShadow-calculator);
+}
+
+input {
+  width: 320px;
+  border: none;
+  padding: 24px;
+  margin: 10px;
+  background: transparent;
+  box-shadow: var(--boxShadow-input);
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  color: var(--primary-text-color);
+}
+
+input::placeholder {
+  color: var(--primary-text-color);
+}
+
+button {
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--primary-text-color);
+  font-size: 20px;
+  box-shadow: var(--boxShadow-btn);
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.equalBtn {
+  background-color: var(--bg-equalBtn-color);
+  color: var(--primary-text-color);
+}
+
+.operator {
+  color: var(--bg-operators-color);
+}
